@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="agls.audience" content="all"  />
+		<meta name="agls.availability" content="online" />
+		<meta name="author" content="Simon Nix"  />
+		<meta name="dc.creator" content="Former Government Agency"  />
+		<meta name="dc.date.created" scheme="ISO8601" content="2013-11-04" />
+		<meta name="dc.date.issued" scheme="ISO8601" content="2013-11-04" />
+		<meta name="dc.date.modified" scheme="ISO8601" content="2013-11-04" />
+		<meta name="dc.description" content="Organisational Suitability Self-Assessment Tool" />
+		<meta name="dc.format" scheme="IMT" content="text/html" />
+		<meta name="dc.language" scheme="RFC3066" content="en_AU" />
+		<meta name="dc.publisher" content="c=AU;o=Commonwealth of Australia;ou=Former Government Agency" />
+		<meta name="dc.rights" content="Copyright Former Government Agency 2013"  />
+		<meta name="dc.subject" content="recruitment, organisation, suitability, self, assessment" />
+		<meta name="dc.title" content="Former Government Agency - Organisational Suitability Self-Assessment" />
+		<meta name="dc.type" content="document"  />
+		<title>Former Government Agency - Organisational Suitability Assessment (OSA) Questionnaire</title>
+		<link rel="stylesheet" href="stylesheets/normalize.css">
+		<link rel="stylesheet" href="stylesheets/site.css">
+		<script src="javascripts/vendor/custom.modernizr.js"></script>
+	</head>
+
+	<body>
+		<div class="row">
+			<div class="small-12 columns">
+				<h1>Example Questionnaire</h1>
+				<p>
+					The page provides an example of a simple, browser based, self-assessment questionnaire (originally developed for a former government agency).  It uses:
+				</p>
+
+				<ul>
+					<li>
+						<a href="http://foundation.zurb.com/">ZURB Foundation for Sites 4</a>
+					</li>
+					<li>
+						<a href="http://jquery.malsup.com/cycle2">Malsup's Cycle2 JQuery Slideshow Plugin</a>
+					</li>
+					<li>
+						<a href="http://jquery.com/">jQuery</a>
+					</li>
+				</ul>
+
+				<p>
+					....
+				</p>
+				<div class="panel">
+					<h2>Organisational Suitability Assessment</h2>
+					<p>
+						If you are considering a career with our organisation, we encourage you to complete a suitability self-assessment. This will
+						ask some general questions, and based on your responses, provide some general advice.
+						It should take approximately 10 minutes to complete.
+					</p>
+					<p>
+						<a id="start" href="#" data-reveal-id="QuestionnaireModal" class="radius button">Start Assessment</a>
+					</p>
+				</div>
+				<br />
+				<h3>Disclaimer</h3>
+				<p>
+					This tool was intended to help you identify aspects of your life or personal
+					circumstances that might need to be considered by our organisation as part of your pre-employment character and
+					integrity suitability assessment.  This self-assessment is completely anonymous and no personally identifiable information will be kept,
+					recorded or stored by our organisation.  Information you provide cannot be used during, or form part of our organisation's selection
+					and recruitment processes.
+				</p>
+				<p>
+					As no personally identifiable information is kept, recorded or stored by our organisation, any information you
+					provide cannot be further disclosed. Advice provided by this tool should be treated as a guide only and should not be considered conclusive.
+					Any recommendations are intended to be used as general guidance and do not prohibit you from considering a
+					career with our organisation.
+				</p>
+			</div>
+		</div>
+
+		<div id="QuestionnaireModal" class="reveal-modal small" role="dialog" aria-hidden="true">
+			<div class="progress round">
+				<span id="progress" class="meter" style="width: 0%"></span>
+			</div>
+
+			<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+			<div id="questionnaire" class="cycle-slideshow" data-cycle-auto-height="container" data-cycle-allow-wrap="false" data-slides="> section" data-cycle-fx="scrollHorz" data-cycle-timeout="0" data-cycle-log="false">
+				<section id="S0">
+					<h3>Question 1</h3>
+					<p>
+						Are you an Australian Citizen?
+					</p>
+					<button id="CitizenYes"class="radius">
+						Yes
+					</button>
+					<button id="CitizenNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S1">
+					<h3>Question 2</h3>
+					<p>
+						Are you over 18?
+					</p>
+					<button id="Over18Yes"class="radius">
+						Yes
+					</button>
+					<button id="Over18No" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S2">
+					<h3>Question 3</h3>
+					<p>
+						Are you at least 15 years old and currently completing an Australian school-based apprenticeship?
+					</p>
+					<button id="ApprenticeshipYes"class="radius">
+						Yes
+					</button>
+					<button id="ApprenticeshipNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S3">
+					<h3>Question 4</h3>
+					<p>
+						Do you act with the highest degree of integrity and honesty, both at work and in your personal life?
+					</p>
+					<button id="EthicalYes"class="radius">
+						Yes
+					</button>
+					<button id="EthicalNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S4">
+					<h3>Question 5</h3>
+					<p>
+						Have you ever been found guilty of a criminal offence, or have you ever spent time in jail?
+					</p>
+
+					<button id="RecordYes" class="radius">
+						Yes
+					</button>
+					<button id="RecordNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S5">
+					<h3>Question 6</h3>
+					<p>
+						Have you (or your family or friends) ever socialised or associated with people
+						(except in the course of your official duties) who engage in criminal activity,
+						or members of outlaw motorcycle gangs, street gangs or extremist groups?
+					</p>
+
+					<button id="CrimActYes" class="radius">
+						Yes
+					</button>
+					<button id="CrimActNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S6">
+					<h3>Question 7</h3>
+					<p>
+						Have you ever used (except where the use was prescribed by a doctor) illicit drugs,
+						performance/image enhancing drugs (e.g. steroids) or other prescription medications?
+					</p>
+
+					<button id="DrugUserYes" class="radius">
+						Yes
+					</button>
+					<button id="DrugUserNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S7">
+					<h3>Question 8</h3>
+					<p>
+						Have you ever (except in the course of your official duties) viewed child pornography?
+					</p>
+
+					<button id="ChildPornYes" class="radius">
+						Yes
+					</button>
+					<button id="ChildPornNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S8">
+					<h3>Question 9</h3>
+					<p>
+						Have you (or your family or friends) ever been associated with the production and/or distribution of
+						illegal goods (such as illicit drugs, precursor chemicals, weapons, firearms, alcohol or tobacco products)?
+					</p>
+
+					<button id="IllegalGoodsYes" class="radius">
+						Yes
+					</button>
+					<button id="IllegalGoodsNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S9">
+					<h3>Question 10</h3>
+					<p>
+						Have you ever had your driver's licence suspended or cancelled?
+					</p>
+
+					<button id="LicenceLostYes" class="radius">
+						Yes
+					</button>
+					<button id="LicenceLostNo" class="radius">
+						No
+					</button>
+				</section>
+
+				<section id="S10">
+					<h3>Question 11</h3>
+					<p>
+						Have you ever been the subject of an apprehended violence order, restraining order or
+						other similar order (however described)?
+					</p>
+
+					<button id="AVOYes" class="radius">
+						Yes
+					</button>
+					<button id="AVONo" class="radius">
+						No
+					</button>
+				</section>
+
+				<!-- Recommendations -->
+
+				<!-- Not Australian Citizen -->
+				<section id="S11">
+					<h3>Recommendation</h3>
+					<p>
+						You must be an Australian Citizen to be eligible for employment with the our organisation.
+					</p>
+
+					<a href="#" data-reveal-id="CitizenshipModal" class="radius small button">More Information</a>
+
+					<div id="CitizenshipModal" class="reveal-modal small">
+						<a class="close-reveal-modal">&#215;</a>
+						<p>
+							Section 22(8) of the <i>Public Service Act 1999</i> states that:
+						</p>
+						<blockquote>
+							An Agency Head must not engage, as an APS employee, a person who is not an Australian citizen,
+							unless the Agency Head considers it appropriate to do so.
+						</blockquote>
+						<p>
+							Consistent with this requirement, the Chief Executive Officer of our organisation has determined that
+							is not appropriate for non-Australian citizens to be employed within the our organisation.
+						</p>
+						<p>
+							<a href="http://www.citizenship.gov.au/">Australian Citizenship Information</a>
+						</p>
+					</div>
+				</section>
+
+				<!-- Not over 18 -->
+				<section id="S12">
+					<h3>Recommendation</h3>
+					<p>
+						As a general rule, you must be at least 18 years old to be eligible for employment with our organisation.
+					</p>
+
+					<p>
+						However if you at least 15 years old, and currently completing an Australian School-based Apprenticeship, you may
+						also be eligible.
+					</p>
+				</section>
+
+				<!-- Ethics -->
+				<section id="S13">
+					<h3>Recommendation</h3>
+					<p>
+						Our employees must demonstrate and adhere to the highest standards of integrity and ethical
+						behaviour - both on, and off, duty.
+					</p>
+					<p>
+						If you feel that you are unable to meet this requirement, you may not be suitable for employment with the our organisation.
+					</p>
+				</section>
+
+				<!-- Jail -->
+				<section id="S14">
+					<h3>Recommendation</h3>
+					<p>
+						Our employees must demonstrate respect for the law, and a commitment to upholding and enforcing
+						the law.
+					</p>
+					<p>
+						A criminal conviction does not prevent you from being employed by our organisation - particularly if you have been
+						convicted of a minor matter, or have a conviction which occurred a long time ago.  However, if you have
+						a significant or extensive criminal history, you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Criminal Associations -->
+				<section id="S15">
+					<h3>Recommendation</h3>
+					<p>
+						As a law enforcement agency, it is not appropriate for, nor does our organisation tolerate, associations between our
+						officers and criminality. These relationships are fundamentally inconsistent with our role, mission and values.
+					</p>
+					<p>
+						If you knowingly and actively associate (except in the course of your official duties) with criminals or
+						persons who may be involved in criminal activity, you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Drug Associations-->
+				<section id="S16">
+					<h3>Recommendation</h3>
+					<p>
+						Our organisation has a 'zero tolerance' policy in relation to any officers using, possessing or selling illicit
+						substances (prohibited drugs).  This activity is fundamentally inconsistent with our role, mission and values.
+					</p>
+					<p>
+						If you have consumed prohibited drugs in the past, this does not prevent you from being employed by our organisation -
+						particularly if the use was minor or it occurred a long time ago.  However, if you currently use prohibited
+						drugs, or have a significant or extensive history of drug use, you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Pornography -->
+				<section id="S17">
+					<h3>Recommendation</h3>
+					<p>
+						Our agency is one of those charged with protecting the most vulnerable individuals within our society.
+					</p>
+					<p>
+						Accessing child exploitation material is a serious crime and is fundamentally inconsistent with
+						our role, mission and values.
+					</p>
+					<p>
+						If you have ever viewed, downloaded, accessed or purchased child pornography,
+						you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Illegal Goods -->
+				<section id="S18">
+					<h3>Recommendation</h3>
+					<p>
+						Our employees must demonstrate respect for the law,
+						and a commitment to upholding and enforcing the law.  Involvement in, or association with, unlawful
+						activity is fundamentally inconsistent with our role, mission and values.
+					</p>
+					<p>
+						If you are or have been (except in the course of your official duties) involved in, or associated with
+						the production, sale, manufacture or distribution of illegal goods, you may not be suitable for employment
+						with our organisation.
+					</p>
+				</section>
+
+				<!-- Traffic Offences -->
+				<section id="S19">
+					<h3>Recommendation</h3>
+					<p>
+						Our employees must demonstrate respect for the law, and a commitment to upholding and enforcing the law.
+					</p>
+					<p>
+						Receiving a speeding fine or other traffic infringement does not prevent you from being employed by our organisation -
+						particularly where the infringement(s) may have been minor, committed without intent, or may have occurred a
+						long time ago.
+					</p>
+					<p>
+						However, if you have a significant or extensive history of serious driving offences or
+						traffic infringements, you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Possibly violent -->
+				<section id="S20">
+					<h3>Recommendation</h3>
+					<p>
+						Our employees must demonstrate and adhere to the highest standards of integrity and ethical
+						behaviour - both on, and off, duty.
+					</p>
+					<p>
+						If you are currently the subject of an Apprehended Violence Order, Restraining
+						Order or other similar order, you may not be suitable for employment with our organisation.
+					</p>
+				</section>
+
+				<!-- Recommend Apply -->
+				<section id="S21">
+					<h3>Recommendation</h3>
+					<p>
+						Thank you for completing the our organisation character and integrity suitability
+						self-assessment.
+					</p>
+					<p>
+						If you completed this self-assessment truthfully and did not receive any
+						adverse recommendations or advice, there does not appear to be anything in your
+						background from a character and integrity perspective which may automatically prevent
+						you from being employed by our organisation. We encourage you to apply for positions of
+						interest as they become available.
+					</p>
+					<p>
+						Please remember that if you do apply for a career with our organisation you must be open and
+						honest in the information you provide, as a failure to do so may impact adversely on
+						an assessment of your suitability for employment with our organisation.
+					</p>
+					<p>
+						<a href="#" title="Link to general recruitment information">More information</a>
+					</p>
+				</section>
+			</div>
+
+			<p>
+				<div id="back" title="Go back a step"></div>
+				<div id="restart" title="Restart assessment"></div>
+			</p>
+
+		</div>
+
+		<script src="javascripts/vendor/jquery-1.10.2.min.js"></script>
+		<script src="javascripts/foundation/foundation.js"></script>
+		<script src="javascripts/foundation/foundation.reveal.js"></script>
+		<script src="javascripts/vendor/jquery.cycle2.min.js"></script>
+		<script src="javascripts/site.js"></script>
+	</body>
+</html>
